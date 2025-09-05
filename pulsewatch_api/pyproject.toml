@@ -1,0 +1,30 @@
+[project]
+name = "pulsewatch-api"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "mishrasunny-coder", email = "mishra.sunny@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.116.1",
+    "httpx>=0.28.1",
+    "pydantic>=2.11.7",
+    "uvicorn[standard]>=0.35.0",
+]
+
+[project.scripts]
+pulsewatch-api = "pulsewatch_api:main"
+
+[build-system]
+requires = ["uv_build>=0.8.15,<0.9.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "mypy>=1.17.1",
+    "pytest>=8.4.2",
+    "pytest-asyncio>=1.1.0",
+    "ruff>=0.12.12",
+]
